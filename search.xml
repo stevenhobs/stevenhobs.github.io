@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>开发环境配置</title>
+      <link href="/2021/10/21/kai_fa/dev-config/"/>
+      <url>/2021/10/21/kai_fa/dev-config/</url>
+      
+        <content type="html"><![CDATA[<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><p>在用户目录下新建 <strong>.npmrc</strong> 文件：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">registry</span>=https://registry.npm.taobao.org/</span><br><span class="line"><span class="attr">cache</span>=D:\Cache\npm</span><br></pre></td></tr></table></figure><ul><li><p>缓存路径自己自定义</p></li><li><p><strong>强烈不推荐 使用npm，他只是个 yarn下载器</strong></p></li></ul><h3 id="nvm-windows"><a href="#nvm-windows" class="headerlink" title="nvm-windows"></a>nvm-windows</h3><p>安装这个程序实现多node版本切换</p><ul><li><p>配置node的实体位置：<code>nvm root [path]</code></p></li><li><p>配置node的下载镜像站：<code>nvm node_mirror https://npm.taobao.org/mirrors/node/</code></p></li><li><p>配置npm的下载镜像站：<code>nvm npm_mirror https://npm.taobao.org/mirrors/npm/</code> (虽然 .npmrc 设置过了)</p></li></ul><p><strong>切换命令一定要使用管理员权限执行</strong></p><h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><ul><li><p>在用户目录下新建 .yarnrc 文件</p></li><li><p><code>npm i -g yarn</code></p></li><li><p><code>yarn config set 变量名 变量值</code></p><p>可配置属性</p><table><thead><tr><th>变量名</th><th>变量值</th><th>说明</th></tr></thead><tbody><tr><td>regitstry</td><td>“<a href="https://registry.npm.taobao.org”/">https://registry.npm.taobao.org”</a></td><td>仓库镜像源</td></tr><tr><td>cache-folder</td><td>“D:\\Cache\\yarn”</td><td>依赖缓存</td></tr><tr><td>global-folder</td><td>“D:\\Sdk\\yarn”</td><td>全局模块</td></tr><tr><td>prefix</td><td>“D:\\Sdk\\yarn”</td><td>模块可执行二进制文件</td></tr></tbody></table><p><em>小彩蛋，在 .yarnrc 添加一行  <code>“--emoji</code> true</em> 执行yarn命令会有可爱的表情哦。</p></li><li><p>yarn 自举</p><p><code>yarn global add yarn</code></p><p><code>npm rm -g yarn</code></p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 开发 </tag>
+            
+            <tag> 配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>少年狼</title>
       <link href="/2021/10/19/za_wen/01-wolf/"/>
       <url>/2021/10/19/za_wen/01-wolf/</url>
