@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Windows Terminal使用</title>
+      <link href="/p/3ef9bc8d/"/>
+      <url>/p/3ef9bc8d/</url>
+      
+        <content type="html"><![CDATA[<p>Windows Terminal 是 windows 新开发的终端交互程序，可支持各种shell运行，支持GPU加速以及UTF-8，在Windows做开发，用之真香。</p><span id="more"></span><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Windows Terminal 可以在 Microsoft Store 中下载，稳定版即可</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>官方的配置文件是 json 格式的，</p><p>主要可以配置的是终端全局设置，shell默认，独立shell的自定义设置，主题样式库和快捷键绑定</p><h3 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h3><table><thead><tr><th>属性名</th><th>属性值</th><th>用途</th></tr></thead><tbody><tr><td>initialCols</td><td>Int</td><td>窗口默认宽</td></tr><tr><td>initialRows</td><td>Int</td><td>窗口默认高</td></tr><tr><td>initialPosition</td><td>Str&gt;Num</td><td>启动位置</td></tr><tr><td>centerOnLaunch</td><td>Bool</td><td>居中启动，和上一条互斥</td></tr><tr><td>copyOnSelect</td><td>Bool</td><td>选中即复制</td></tr><tr><td>copyFormatting</td><td>Bool，”all”,”none”,”html”,”rtf”</td><td>复制附加格式信息</td></tr><tr><td>trimBlockSelection</td><td>Bool</td><td>去除首尾空格</td></tr><tr><td>minimizeToNotificationArea</td><td>Bool</td><td>最小化通知栏</td></tr><tr><td>alwaysShowNotificationIcon</td><td>Bool</td><td>保留通知栏</td></tr><tr><td>multiLinePasteWarning</td><td>Bool</td><td>多行粘贴警告</td></tr><tr><td>useAcrylicInTabRow</td><td>Bool</td><td>标题栏亚克力背景</td></tr><tr><td>confirmCloseAllTabs</td><td>Bool</td><td>关闭窗口提醒</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><h3 id="默认配置-amp-Shell独立配置"><a href="#默认配置-amp-Shell独立配置" class="headerlink" title="默认配置 &amp; Shell独立配置"></a>默认配置 &amp; Shell独立配置</h3><table><thead><tr><th>属性名</th><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>name</td><td>Str</td><td>Shell名</td></tr><tr><td>commandline</td><td>Str</td><td>可执行命令</td></tr><tr><td>startingDirectory</td><td>Str</td><td>初始路径</td></tr><tr><td>tabTitle</td><td>Str</td><td>Shell标签名</td></tr><tr><td>hidden</td><td>Bool</td><td>选择列表隐藏</td></tr><tr><td>colorScheme</td><td>Str</td><td>颜色样式</td></tr><tr><td>font</td><td>Obj</td><td>字体系列设置对象</td></tr><tr><td>font.face</td><td>Str</td><td>字体名</td></tr><tr><td>font.size</td><td>Num</td><td>字体大小</td></tr><tr><td>font.weight</td><td>Str</td><td>字重</td></tr><tr><td>font.features</td><td>Obj</td><td>字体特性对象</td></tr><tr><td>font.axes</td><td>Obj</td><td>字体格式对象</td></tr><tr><td>font.axes.ital</td><td>Num</td><td>斜体</td></tr><tr><td>intenseTextStyle</td><td>“none”,”bold”,”bright”,”all”</td><td>强调字符格式</td></tr><tr><td>cursorShape</td><td>“bar”,”vintage”,”underscore”,”filledBox”,”emptyBox”,”doubleUnderscore”</td><td>光标形状</td></tr><tr><td>backgroundImage</td><td>Str</td><td>背景图</td></tr><tr><td>backgroundImageOpacity</td><td>Num[0,1]</td><td>背景图不透明度</td></tr><tr><td>icon</td><td>Str</td><td>标签logo</td></tr><tr><td>useAcrylic</td><td>False</td><td>背景亚克力材质</td></tr><tr><td>opacity</td><td>Num[0,1]</td><td>不透明度</td></tr><tr><td>padding</td><td>Num</td><td>内边距</td></tr><tr><td>scrollbarState</td><td>“visible”,”hidden”</td><td>滚条状态</td></tr><tr><td>background</td><td>Str</td><td>背景色</td></tr><tr><td>guid</td><td>Str:guid</td><td>独立标识</td></tr><tr><td>bellStyle</td><td>“all”,”audible”,”visual”,”none”</td><td>响铃</td></tr></tbody></table><h2 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h2><ul><li><code>Ctrl + Shift + f</code> 快捷搜索</li><li><code>Alt + Shift + plus</code> + <code>Alt + Shift + -</code> 分拆窗格</li><li><code>Alt + Shift + D</code> 分拆同源窗格（不可改方向）</li><li><code>Alt + UDLR</code> 切换聚焦窗格</li><li><code>Alt + Shift + UDLR</code> 调整窗格宽高 </li><li><code>Ctrl + Shift + w</code> 关闭聚焦窗格</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于今天活在我梦里的猫这件事儿</title>
       <link href="/p/cb165d0/"/>
       <url>/p/cb165d0/</url>

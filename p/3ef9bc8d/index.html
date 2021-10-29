@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Windows Terminal使用"><meta name="keywords" content="工具"><meta name="author" content="Steven Hobs"><meta name="copyright" content="Steven Hobs"><title>Windows Terminal使用 | 禾下乘凉</title><link rel="shortcut icon" href="/assets/usual/favicon.png"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.1.</span> <span class="toc-text">全局设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE-amp-Shell%E7%8B%AC%E7%AB%8B%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">默认配置 &amp; Shell独立配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text">快捷操作</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/assets/usual/avatar.jpg"></div><div class="author-info__name text-center">Steven Hobs</div><div class="author-info__description text-center">意犹未尽是本性，适可而止方从容。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">10</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">10</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/assets/usual/banner.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">禾下乘凉</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">类别</a><a class="site-page" href="/gallery">相册</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">Windows Terminal使用</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-10-29</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%BC%80%E5%8F%91/">开发</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">481</span><span class="post-meta__separator">|</span><span>阅读时长: 1 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>Windows Terminal 是 windows 新开发的终端交互程序，可支持各种shell运行，支持GPU加速以及UTF-8，在Windows做开发，用之真香。</p>
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Windows Terminal 可以在 Microsoft Store 中下载，稳定版即可</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>官方的配置文件是 json 格式的，</p>
+<p>主要可以配置的是终端全局设置，shell默认，独立shell的自定义设置，主题样式库和快捷键绑定</p>
+<h3 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h3><table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>属性值</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>initialCols</td>
+<td>Int</td>
+<td>窗口默认宽</td>
+</tr>
+<tr>
+<td>initialRows</td>
+<td>Int</td>
+<td>窗口默认高</td>
+</tr>
+<tr>
+<td>initialPosition</td>
+<td>Str&gt;Num</td>
+<td>启动位置</td>
+</tr>
+<tr>
+<td>centerOnLaunch</td>
+<td>Bool</td>
+<td>居中启动，和上一条互斥</td>
+</tr>
+<tr>
+<td>copyOnSelect</td>
+<td>Bool</td>
+<td>选中即复制</td>
+</tr>
+<tr>
+<td>copyFormatting</td>
+<td>Bool，”all”,”none”,”html”,”rtf”</td>
+<td>复制附加格式信息</td>
+</tr>
+<tr>
+<td>trimBlockSelection</td>
+<td>Bool</td>
+<td>去除首尾空格</td>
+</tr>
+<tr>
+<td>minimizeToNotificationArea</td>
+<td>Bool</td>
+<td>最小化通知栏</td>
+</tr>
+<tr>
+<td>alwaysShowNotificationIcon</td>
+<td>Bool</td>
+<td>保留通知栏</td>
+</tr>
+<tr>
+<td>multiLinePasteWarning</td>
+<td>Bool</td>
+<td>多行粘贴警告</td>
+</tr>
+<tr>
+<td>useAcrylicInTabRow</td>
+<td>Bool</td>
+<td>标题栏亚克力背景</td>
+</tr>
+<tr>
+<td>confirmCloseAllTabs</td>
+<td>Bool</td>
+<td>关闭窗口提醒</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="默认配置-amp-Shell独立配置"><a href="#默认配置-amp-Shell独立配置" class="headerlink" title="默认配置 &amp; Shell独立配置"></a>默认配置 &amp; Shell独立配置</h3><table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>Str</td>
+<td>Shell名</td>
+</tr>
+<tr>
+<td>commandline</td>
+<td>Str</td>
+<td>可执行命令</td>
+</tr>
+<tr>
+<td>startingDirectory</td>
+<td>Str</td>
+<td>初始路径</td>
+</tr>
+<tr>
+<td>tabTitle</td>
+<td>Str</td>
+<td>Shell标签名</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>Bool</td>
+<td>选择列表隐藏</td>
+</tr>
+<tr>
+<td>colorScheme</td>
+<td>Str</td>
+<td>颜色样式</td>
+</tr>
+<tr>
+<td>font</td>
+<td>Obj</td>
+<td>字体系列设置对象</td>
+</tr>
+<tr>
+<td>font.face</td>
+<td>Str</td>
+<td>字体名</td>
+</tr>
+<tr>
+<td>font.size</td>
+<td>Num</td>
+<td>字体大小</td>
+</tr>
+<tr>
+<td>font.weight</td>
+<td>Str</td>
+<td>字重</td>
+</tr>
+<tr>
+<td>font.features</td>
+<td>Obj</td>
+<td>字体特性对象</td>
+</tr>
+<tr>
+<td>font.axes</td>
+<td>Obj</td>
+<td>字体格式对象</td>
+</tr>
+<tr>
+<td>font.axes.ital</td>
+<td>Num</td>
+<td>斜体</td>
+</tr>
+<tr>
+<td>intenseTextStyle</td>
+<td>“none”,”bold”,”bright”,”all”</td>
+<td>强调字符格式</td>
+</tr>
+<tr>
+<td>cursorShape</td>
+<td>“bar”,”vintage”,”underscore”,”filledBox”,”emptyBox”,”doubleUnderscore”</td>
+<td>光标形状</td>
+</tr>
+<tr>
+<td>backgroundImage</td>
+<td>Str</td>
+<td>背景图</td>
+</tr>
+<tr>
+<td>backgroundImageOpacity</td>
+<td>Num[0,1]</td>
+<td>背景图不透明度</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>Str</td>
+<td>标签logo</td>
+</tr>
+<tr>
+<td>useAcrylic</td>
+<td>False</td>
+<td>背景亚克力材质</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>Num[0,1]</td>
+<td>不透明度</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>Num</td>
+<td>内边距</td>
+</tr>
+<tr>
+<td>scrollbarState</td>
+<td>“visible”,”hidden”</td>
+<td>滚条状态</td>
+</tr>
+<tr>
+<td>background</td>
+<td>Str</td>
+<td>背景色</td>
+</tr>
+<tr>
+<td>guid</td>
+<td>Str:guid</td>
+<td>独立标识</td>
+</tr>
+<tr>
+<td>bellStyle</td>
+<td>“all”,”audible”,”visual”,”none”</td>
+<td>响铃</td>
+</tr>
+</tbody></table>
+<h2 id="快捷操作"><a href="#快捷操作" class="headerlink" title="快捷操作"></a>快捷操作</h2><ul>
+<li><code>Ctrl + Shift + f</code> 快捷搜索</li>
+<li><code>Alt + Shift + plus</code> + <code>Alt + Shift + -</code> 分拆窗格</li>
+<li><code>Alt + Shift + D</code> 分拆同源窗格（不可改方向）</li>
+<li><code>Alt + UDLR</code> 切换聚焦窗格</li>
+<li><code>Alt + Shift + UDLR</code> 调整窗格宽高 </li>
+<li><code>Ctrl + Shift + w</code> 关闭聚焦窗格</li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/p/cb165d0/"><span>关于今天活在我梦里的猫这件事儿</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(/assets/usual/banner.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2021 By Steven Hobs</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">百年歌自苦，未见有知音。</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
