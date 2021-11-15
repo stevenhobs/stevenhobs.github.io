@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="VSCode 基本使用"><meta name="keywords" content="工具"><meta name="author" content="Steven Hobs"><meta name="copyright" content="Steven Hobs"><title>VSCode 基本使用 | 禾下乘凉</title><link rel="shortcut icon" href="/assets/usual/favicon.png"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%BF%85%E5%A4%87"><span class="toc-number">2.1.</span> <span class="toc-text">通用必备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91"><span class="toc-number">2.2.</span> <span class="toc-text">前端开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">用户配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">4.</span> <span class="toc-text">其他</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/assets/usual/avatar.jpg"></div><div class="author-info__name text-center">Steven Hobs</div><div class="author-info__description text-center">意犹未尽是本性，适可而止方从容。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">12</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">10</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">7</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/assets/usual/banner.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">禾下乘凉</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">类别</a><a class="site-page" href="/gallery">相册</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">VSCode 基本使用</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-11-15</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%BC%80%E5%8F%91/">开发</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">995</span><span class="post-meta__separator">|</span><span>阅读时长: 4 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>VSCode，天下第一编辑器，古人云，欲善其事，必先利其器。</p>
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>官网下载，默认的安装方式即可，会注册为可编辑文件的默认编辑器以及加入环境变量(code命令)。</p>
+<p>官方还提供一insider 版本，预览版，每天一更，也可以使用，这样就有两个vscode了。</p>
+<p>官方也提供了一个便携版，绿色免安装，解压后，程序根路径添加 /data/tmp 两个文件夹，就可以作为一个独立的编辑器，升级需要自己将数据文件复制到新的解压的程序路径下就行。</p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>vscode第一次打开现在是默认会检测当前系统语言然后装相应的语言包插件，剩下的插件完全自己搭配</p>
+<p>推荐以下几个插件</p>
+<h3 id="通用必备"><a href="#通用必备" class="headerlink" title="通用必备"></a>通用必备</h3><table>
+<thead>
+<tr>
+<th>插件</th>
+<th>说明</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>简体中文</td>
+<td>汉化包</td>
+<td></td>
+</tr>
+<tr>
+<td>Bearded Theme</td>
+<td>大胡子-主题皮肤(内含多款)</td>
+<td>个人喜欢的</td>
+</tr>
+<tr>
+<td>Material Icon Theme</td>
+<td>材料图标包（文件）</td>
+<td>当前最好最全的图标包</td>
+</tr>
+<tr>
+<td>Fluent Icons</td>
+<td>流畅图标包（程序）</td>
+<td>可不装，感觉比官方圆润些</td>
+</tr>
+<tr>
+<td>Visual Studio IntelliCode</td>
+<td>代码智能感知</td>
+<td>写代码，有提示</td>
+</tr>
+<tr>
+<td>Prettier</td>
+<td>前端及常用文件格式化</td>
+<td></td>
+</tr>
+<tr>
+<td>Markdown All in One</td>
+<td>Markdown支持</td>
+<td></td>
+</tr>
+<tr>
+<td>EditorConfig for VS Code</td>
+<td>editorconfig规范支持</td>
+<td></td>
+</tr>
+<tr>
+<td>Code Spell Checker</td>
+<td>单词拼写检查</td>
+<td>英语不好的可能用起来有点痛苦</td>
+</tr>
+<tr>
+<td>Code Runner</td>
+<td>单文件代码执行</td>
+<td>谁不喜欢三角执行按钮呢？</td>
+</tr>
+<tr>
+<td>Color Highlight</td>
+<td>颜色代码背景色高亮</td>
+<td></td>
+</tr>
+<tr>
+<td>Bracket Pair Colorizer2</td>
+<td>彩虹括号第二代</td>
+<td>官方也支持了，但颜色丑</td>
+</tr>
+<tr>
+<td>Better Comments</td>
+<td>注释增强版</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="前端开发"><a href="#前端开发" class="headerlink" title="前端开发"></a>前端开发</h3><p>插件搜索 关键词 html css javascript，排名前几个都可以看看，下载数和评价综合参考。自己用的舒服即可。</p>
+<table>
+<thead>
+<tr>
+<th>插件</th>
+<th>说明</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Auto Close Tag</td>
+<td>标签自动闭合</td>
+<td></td>
+</tr>
+<tr>
+<td>Auto Rename Tag</td>
+<td>标签自动重命名</td>
+<td></td>
+</tr>
+<tr>
+<td>ESLint</td>
+<td>代码格式审查</td>
+<td>需要搭配全局模块 eslint</td>
+</tr>
+<tr>
+<td>HTML Snippets</td>
+<td>h5标签片段</td>
+<td></td>
+</tr>
+<tr>
+<td>HTML CSS Support</td>
+<td>页面CSS支持</td>
+<td></td>
+</tr>
+<tr>
+<td>JavaScript(ES6) code snippets</td>
+<td>es6 js片段</td>
+<td></td>
+</tr>
+<tr>
+<td>Live Server</td>
+<td>热更新伺服器</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>要是用其他的技术栈，参考官方建议或者自己搜索看看说明书就行，比如sass支持，找到下载量过百万或者最多的，基本就能用了。</p>
+<h2 id="用户配置文件"><a href="#用户配置文件" class="headerlink" title="用户配置文件"></a>用户配置文件</h2><p>settings.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;extensions.ignoreRecommendations&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;workbench.iconTheme&quot;</span>: <span class="string">&quot;material-icon-theme&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;workbench.colorTheme&quot;</span>: <span class="string">&quot;Bearded Theme Monokai Light&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;workbench.productIconTheme&quot;</span>: <span class="string">&quot;fluent-icons&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;editor.fontFamily&quot;</span>: <span class="string">&quot;&#x27;Cascadia Code&#x27;,&#x27;JetBrains Mono&#x27; , &#x27;FZFW ZhuZi A YuanS D&#x27;, &#x27;Microsoft YaHei&#x27;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;editor.renderControlCharacters&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;editor.fontLigatures&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;editor.suggestSelection&quot;</span>: <span class="string">&quot;first&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;editor.cursorSmoothCaretAnimation&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;editor.cursorBlinking&quot;</span>: <span class="string">&quot;smooth&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;editor.linkedEditing&quot;</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;window.menuBarVisibility&quot;</span>: <span class="string">&quot;toggle&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;explorer.confirmDelete&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">&quot;security.workspace.trust.enabled&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;terminal.integrated.cursorStyle&quot;</span>: <span class="string">&quot;line&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;terminal.integrated.cursorWidth&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">&quot;terminal.integrated.cursorBlinking&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;terminal.external.windowsExec&quot;</span>: <span class="string">&quot;wt&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;files.eol&quot;</span>: <span class="string">&quot;\n&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;[javascript]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;[typescript]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;[jsonc]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;[json]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;[html]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;[markdown]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;typescript.updateImportsOnFileMove.enabled&quot;</span>: <span class="string">&quot;always&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;code-runner.clearPreviousOutput&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;code-runner.executorMap&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;javascript&quot;</span>: <span class="string">&quot;node&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span>: <span class="string">&quot;deno run&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;bat&quot;</span>: <span class="string">&quot;cmd /c&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;shellscript&quot;</span>: <span class="string">&quot;bash&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;liveServer.settings.donotShowInfoMsg&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;liveServer.settings.CustomBrowser&quot;</span>: <span class="string">&quot;chrome&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;workbench.editorAssociations&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;*.md&quot;</span>: <span class="string">&quot;vscode.markdown.preview.editor&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这个配置文件，要会改，其实和terminal调教差不多，而且官方都有数值参看的。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>Windows系统大陆用户会有 Ctrl + Space 被中文输入法切换占用的情况（情况少数），导致Ctrl空格唤不出来提示，需要去更改输入法热键，可以将Ctrl + Space 去掉，用Shift换中英文就够了</p>
+<p><img src="/p/undefined/input_set.png" alt="中文输入法设置"></p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/p/153a2382/"><span>Babel转译器使用</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(/assets/usual/banner.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2021 By Steven Hobs</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">百年歌自苦，未见有知音。</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
