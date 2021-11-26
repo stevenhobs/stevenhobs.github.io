@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>CMake入门</title>
+      <link href="/p/557a8896/"/>
+      <url>/p/557a8896/</url>
+      
+        <content type="html"><![CDATA[<p>CMake 是工程构建工具，用于整合代码资源，定义构建流程的元构建工具，支持C/C++，Rust等多个编程语言，这里学习一下基本语法。</p><span id="more"></span><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>现在有很多程序都使用CMake作为工程构建工具，构建文件语法简单，跨平台，易于修改维护，且兼容多个构建系统。</p><h3 id="源码编译与生成输出"><a href="#源码编译与生成输出" class="headerlink" title="源码编译与生成输出"></a>源码编译与生成输出</h3><p>cmake工程，可以指定 build路径（可以避免污染资源文件）与 安装目标路径。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd project_path</span><br><span class="line">mkdir build &amp;&amp; cd build</span><br><span class="line">cmake .. -DCMAKE_INSTALAL_PREFIX=&lt;place u wanne put program in&gt; # 生成构建配置</span><br><span class="line">cmake --build . # 在当前路径下编译</span><br><span class="line">cmake --build . --target install</span><br></pre></td></tr></table></figure><p>cmake-gui程序是可视化操作界面，所见即所得，不细说了。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>cmake最开始的阶段是配置，生成指定的构建流程文件。</p><h3 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h3><p><code>cmake .. -G Ninja</code></p><p>-G 命令 设置 构建方式。</p><p>具体有以下几个</p><table><thead><tr><th>构建方式</th><th>参数（大小写敏感）</th><th>说明</th></tr></thead><tbody><tr><td>默认</td><td></td><td>默认是用make工具</td></tr><tr><td>ninja-build</td><td>Ninja</td><td>谷歌家的并行构建工具，应该是最快的</td></tr><tr><td>VS工程</td><td>”Visual Studio 2019“ / ”Visual Studio 16“</td><td>4位为指定的VS版本 或者 用两位数字 16是2019，17是2021</td></tr></tbody></table><p>其他可选参数</p><table><thead><tr><th>Flag</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td>-A</td><td>x64</td><td>架构</td></tr><tr><td>-Thost=</td><td>x64</td><td>主机架构</td></tr><tr><td>-T</td><td></td><td>工具集设置</td></tr></tbody></table><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>-D设定变量，如</p><p><code>-DCMAKE_TOOLCHAIN_FILE=&lt;PathOfFile&gt;</code></p><table><thead><tr><th>Name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td>CMAKE_MODULE_PATH</td><td>Path to search for additional CMake modules</td><td>CMAKE模块搜索路径</td></tr><tr><td>CMAKE_BUILD_TYPE</td><td></td><td>构建配置，调试型/优化释出型</td></tr><tr><td>CMAKE_INSTALL_PREFIX</td><td></td><td>软件安装路径</td></tr><tr><td>CMAKE_TOOLCHAIN_FILE</td><td></td><td>工具链装配信息</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><h3 id="预设"><a href="#预设" class="headerlink" title="预设"></a>预设</h3><p>CMakePresets.json</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">&quot;configurePresets&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;ninja-release&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;binaryDir&quot;</span>: <span class="string">&quot;$&#123;sourceDir&#125;/build/$&#123;presetName&#125;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;generator&quot;</span>: <span class="string">&quot;Ninja&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;cacheVariables&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;CMAKE_BUILD_TYPE&quot;</span>: <span class="string">&quot;Release&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>使用预设的方式<code>cmake -S /path/to/source --preset=ninja-release</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/p/0/"/>
+      <url>/p/0/</url>
+      
+        <content type="html"><![CDATA[<p>…..</p><span id="more"></span>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VSCode 基本使用</title>
       <link href="/p/5e1859fb/"/>
       <url>/p/5e1859fb/</url>

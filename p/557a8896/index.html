@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="CMake入门"><meta name="keywords" content="C++"><meta name="author" content="Steven Hobs"><meta name="copyright" content="Steven Hobs"><title>CMake入门 | 禾下乘凉</title><link rel="shortcut icon" href="/assets/usual/favicon.png"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91%E4%B8%8E%E7%94%9F%E6%88%90%E8%BE%93%E5%87%BA"><span class="toc-number">1.1.</span> <span class="toc-text">源码编译与生成输出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text">生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">2.2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E8%AE%BE"><span class="toc-number">2.3.</span> <span class="toc-text">预设</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/assets/usual/avatar.jpg"></div><div class="author-info__name text-center">Steven Hobs</div><div class="author-info__description text-center">意犹未尽是本性，适可而止方从容。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">14</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">11</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">7</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/assets/usual/banner.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">禾下乘凉</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">类别</a><a class="site-page" href="/gallery">相册</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">CMake入门</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-11-25</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%BC%80%E5%8F%91/">开发</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">454</span><span class="post-meta__separator">|</span><span>阅读时长: 1 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>CMake 是工程构建工具，用于整合代码资源，定义构建流程的元构建工具，支持C/C++，Rust等多个编程语言，这里学习一下基本语法。</p>
+<span id="more"></span>
+
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>现在有很多程序都使用CMake作为工程构建工具，构建文件语法简单，跨平台，易于修改维护，且兼容多个构建系统。</p>
+<h3 id="源码编译与生成输出"><a href="#源码编译与生成输出" class="headerlink" title="源码编译与生成输出"></a>源码编译与生成输出</h3><p>cmake工程，可以指定 build路径（可以避免污染资源文件）与 安装目标路径。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd project_path</span><br><span class="line">mkdir build &amp;&amp; cd build</span><br><span class="line">cmake .. -DCMAKE_INSTALAL_PREFIX=&lt;place u wanne put program in&gt; # 生成构建配置</span><br><span class="line">cmake --build . # 在当前路径下编译</span><br><span class="line">cmake --build . --target install</span><br></pre></td></tr></table></figure>
+
+<p>cmake-gui程序是可视化操作界面，所见即所得，不细说了。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>cmake最开始的阶段是配置，生成指定的构建流程文件。</p>
+<h3 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h3><p><code>cmake .. -G Ninja</code></p>
+<p>-G 命令 设置 构建方式。</p>
+<p>具体有以下几个</p>
+<table>
+<thead>
+<tr>
+<th>构建方式</th>
+<th>参数（大小写敏感）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认</td>
+<td></td>
+<td>默认是用make工具</td>
+</tr>
+<tr>
+<td>ninja-build</td>
+<td>Ninja</td>
+<td>谷歌家的并行构建工具，应该是最快的</td>
+</tr>
+<tr>
+<td>VS工程</td>
+<td>”Visual Studio 2019“ / ”Visual Studio 16“</td>
+<td>4位为指定的VS版本 或者 用两位数字 16是2019，17是2021</td>
+</tr>
+</tbody></table>
+<p>其他可选参数</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-A</td>
+<td>x64</td>
+<td>架构</td>
+</tr>
+<tr>
+<td>-Thost=</td>
+<td>x64</td>
+<td>主机架构</td>
+</tr>
+<tr>
+<td>-T</td>
+<td></td>
+<td>工具集设置</td>
+</tr>
+</tbody></table>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>-D设定变量，如</p>
+<p><code>-DCMAKE_TOOLCHAIN_FILE=&lt;PathOfFile&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CMAKE_MODULE_PATH</td>
+<td>Path to search for additional CMake modules</td>
+<td>CMAKE模块搜索路径</td>
+</tr>
+<tr>
+<td>CMAKE_BUILD_TYPE</td>
+<td></td>
+<td>构建配置，调试型/优化释出型</td>
+</tr>
+<tr>
+<td>CMAKE_INSTALL_PREFIX</td>
+<td></td>
+<td>软件安装路径</td>
+</tr>
+<tr>
+<td>CMAKE_TOOLCHAIN_FILE</td>
+<td></td>
+<td>工具链装配信息</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="预设"><a href="#预设" class="headerlink" title="预设"></a>预设</h3><p>CMakePresets.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">&quot;configurePresets&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;ninja-release&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;binaryDir&quot;</span>: <span class="string">&quot;$&#123;sourceDir&#125;/build/$&#123;presetName&#125;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;generator&quot;</span>: <span class="string">&quot;Ninja&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;cacheVariables&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;CMAKE_BUILD_TYPE&quot;</span>: <span class="string">&quot;Release&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用预设的方式<code>cmake -S /path/to/source --preset=ninja-release</code></p>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C++</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/p/0/"><span></span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(/assets/usual/banner.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2021 By Steven Hobs</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">百年歌自苦，未见有知音。</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
